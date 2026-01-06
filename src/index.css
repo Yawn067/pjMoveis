@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --primary: #002137;
+  --secondary: #001C44;
+  --bg-light: #D1D3D4;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-light);
+}
+
 h1 {
   font-size: 30px;
   color: azure;

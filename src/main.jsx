@@ -4,7 +4,7 @@ import './reset.css'
 import './index.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
+import About from './pages/About/About.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
