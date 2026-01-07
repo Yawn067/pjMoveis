@@ -3,22 +3,20 @@ import { createRoot } from 'react-dom/client'
 import './reset.css'
 import './index.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './pages/Home.jsx'
+import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
+import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
-
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
-
-    <Footer />
   </StrictMode>,
 )

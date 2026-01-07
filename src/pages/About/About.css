@@ -47,7 +47,7 @@
 
 .hero-title-wrapper h1 {
   font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.9;
+  line-height: 0.98;
   margin: 0;
   font-weight: 900;
   color: var(--primary);

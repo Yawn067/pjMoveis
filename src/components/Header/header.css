@@ -1,0 +1,25 @@
+header {
+    width: 100%;
+    background-color: rgb(74, 87, 97);
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    padding: 15px 110px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.cabecalho-op {
+    font-size:  2em;
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.2s ease;
+}
+
+.cabecalho-op:hover {
+  color: var(--secondary)
+}
