@@ -11,7 +11,7 @@ function Header() {
         </div>
         <Link className='cabecalho-op' to="/">Início</Link>
         <Link className='cabecalho-op' to="/about">Sobre Nós</Link>
-        <Link className='cabecalho-op' to="/about">Projetos</Link>
+        <Link className='cabecalho-op' to="/projetos">Projetos</Link>
     </header>
   );
 }

@@ -3,6 +3,7 @@
 :root {
   --primary: #002137;
   --secondary: #001C44;
+  --cinza: rgb(74, 87, 97);
   --bg-light: #D1D3D4;
   --white: #ffffff;
   --transition: all 0.3s ease;

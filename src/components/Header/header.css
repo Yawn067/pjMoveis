@@ -1,6 +1,5 @@
-header {
-    width: 100%;
-    background-color: rgb(74, 87, 97);
+header { 
+    background-color: var(--cinza);
     display: flex;
     gap: 70px;
     align-items: center;
