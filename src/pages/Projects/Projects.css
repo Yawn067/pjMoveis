@@ -1,0 +1,155 @@
+
+.projects-page {
+  background-color: var(--neutral);
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.projects-header {
+  padding: 120px 5% 60px 5%;
+  background-color: var(--primary);
+  color: var(--white);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.line-tag {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--neutral);
+  padding-left: 15px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.projects-header h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  margin: 0;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+}
+
+/* Category Sections */
+.category-section {
+  display: flex;
+  padding: 100px 5%;
+  gap: 50px;
+  min-height: 80vh;
+}
+
+.category-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-sticky {
+  position: sticky;
+  top: 100px;
+}
+
+.category-number {
+  font-size: 5rem;
+  font-weight: 900;
+  opacity: 0.1;
+  display: block;
+  line-height: 1;
+}
+
+.category-info h2 {
+  font-size: 2.5rem;
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  margin: 20px 0;
+}
+
+.view-more {
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 12px 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.view-more:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Carousel Frame */
+.category-display {
+  flex: 2;
+  min-width: 0; /* Splide não quebra o flex */
+}
+
+.carousel-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border: 1px solid rgba(0, 33, 55, 0.1);
+  box-shadow: 20px 20px 0px var(--secondary); /* Sombra sólida industrial */
+}
+
+/* Mockup apenas para visualização sem o Splide rodando */
+.carousel-mockup {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.projects-cta {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.cta-box {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 80px 40px;
+  position: relative;
+}
+
+.cta-box h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: var(--neutral);
+  color: var(--primary);
+  border: none;
+  padding: 15px 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+@media (max-width: 968px) {
+  .category-section, .category-section.reverse {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+  
+  .category-sticky {
+    position: static;
+  }
+}
