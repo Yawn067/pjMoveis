@@ -1,4 +1,4 @@
-header { 
+.cabecalho { 
     background-color: var(--cinza);
     display: flex;
     gap: 70px;
@@ -6,7 +6,7 @@ header {
     padding: 15px 110px;
 }
 
-header img {
+.cabecalho img {
     width: 150px;
     height: auto;
     margin-right: 30px;
@@ -21,4 +21,17 @@ header img {
 
 .cabecalho-op:hover {
   color: var(--secondary)
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+  }
+  .cabecalho img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }

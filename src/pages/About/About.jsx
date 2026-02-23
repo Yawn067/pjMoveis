@@ -1,4 +1,5 @@
 import "./About.css";
+import ContactSection from "../../components/ContactSection/ContactSection";
 
 const About = () => {
   const mvv = [
@@ -117,6 +118,7 @@ const About = () => {
           </div>
         </section>
       </section>
+      <ContactSection />
     </div>
   );
 };

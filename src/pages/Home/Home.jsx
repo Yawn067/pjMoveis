@@ -1,6 +1,14 @@
-import "./home.css";
 import Carousel from "../../components/Carousel/Carousel";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import ContactSection from "../../components/ContactSection/ContactSection";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./home.css";
 
 import produto1 from "../../assets/images/logo-pjmoveis.jpg";
 import produto2 from "../../assets/images/logo-pjmoveis.jpg";
@@ -20,13 +28,57 @@ const listaProdutos = [
     title: "Projetos Sob Medida",
   },
 ];
+const slides = [
+  {
+    id: 1,
+    image: "/images/logo-pjmoveis.jpg",
+    title: "Qualidade e Sofisticação",
+    subtitle: "Móveis planejados para transformar seu ambiente",
+  },
+  {
+    id: 2,
+    image: "/images/imGenerica2.avif",
+    title: "Design Moderno",
+    subtitle: "Funcionalidade e beleza em cada detalhe",
+  },
+  {
+    id: 3,
+    image: "/images/imGenerica3.jpg",
+    title: "Seu sonho, nossa missão",
+    subtitle: "Projetos personalizados para você",
+  },
+];
 
 function Home() {
   return (
     <main className="home">
       <section className="home-hero">
-        <h1>Bem-vindo à PJMóveis</h1>
-        <p>Soluções em móveis planejados para transformar seu espaço.</p>
+        <Swiper
+          modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          effect="fade"
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="home-hero-swiper"
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              >
+                <div className="overlay">
+                  <h1>{slide.title}</h1>
+                  <p>{slide.subtitle}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
       <section className="home-produtos">
@@ -59,6 +111,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ContactSection />
     </main>
   );
 }
