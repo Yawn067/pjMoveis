@@ -171,6 +171,34 @@
   color: var(--neutral);
 }
 
+/* more about */
+
+.more-about-section {
+  padding: 100px 10%;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.more-about-grid {
+  display: grid;
+  /* O '250px' é a largura mínima antes de quebrar para a próxima linha */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.more-about-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.more-about-text p {
+  line-height: 1.6;
+    font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--neutral);
+}
+
 /* MVV Section */
 .mvv-section {
   padding: 120px 5%;

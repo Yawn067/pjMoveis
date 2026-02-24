@@ -141,9 +141,20 @@ const Projects = () => {
 
       <section className="projects-cta">
         <div className="cta-box">
-          <h3>Tem um projeto especial em mente?</h3>
+          <h3>Tem um projeto especial em mente? Entre em contato!</h3>
           <p>Executamos projetos personalizados sob medida para sua empresa.</p>
-          <button className="cta-button">Solicitar Orçamento</button>
+          
+          <div className="cta-social-wrapper">
+            <a href="" target="_blank" rel="noreferrer" className="cta-link whatsapp">
+              <span>WHATSAPP</span>
+            </a>
+            <a href="https://www.instagram.com/pjmoveis_estruturas_metalicas/" target="_blank" rel="noreferrer" className="cta-link instagram">
+              <span>INSTAGRAM</span>
+            </a>
+            <a href="mailto:colocaremailaqui" className="cta-link email">
+              <span>E-MAIL</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
