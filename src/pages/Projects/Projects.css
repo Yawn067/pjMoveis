@@ -26,12 +26,13 @@
 .projects-header h1 {
   font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 900;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
-.outline-text {
+.projects-page .outline-text {
   color: transparent;
-  -webkit-text-stroke: 1px var(--white);
+  -webkit-text-stroke-width: 2px; /* Largura do contorno */
+  -webkit-text-stroke-color: var(--white); /* Cor do contorno */
 }
 
 /* Category Sections */

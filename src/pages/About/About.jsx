@@ -5,32 +5,27 @@ const About = () => {
   const mvv = [
     {
       title: "Missão",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+      text: "Oferecer soluções em móveis industriais, serralheria e estruturas metálicas com excelência, unindo qualidade, inovação e comprometimento em cada projeto. Atuamos de forma ética e transparente, desenvolvendo peças e estruturas que aliam resistência, funcionalidade e design, sempre priorizando a satisfação dos nossos clientes.",
     },
     {
       title: "Visão",
-      text: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget.",
+      text: "Ser reconhecida como referência no segmento de móveis industriais, estruturase esquadrias metálicas, destacando-se pela inovação, capacidade de executar projetos personalizados e de grande porte, além do alto padrão de qualidade em cada entrega.",
     },
     {
       title: "Valores",
-      text: "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit.",
+      text: "Comprometimento com clientes e resultados, Atuamos com responsabilidade ededicação para superar expectativas em cada projeto.",
     },
   ];
 
   return (
     <div className="modern-about">
       {/* Header com Logo */}
-      <nav className="about-nav">
-        <div className="mini-logo">
-          <img src="src/assets/images/logo-pjmoveis.jpg" alt="" />
-        </div>
-        <div className="line-decorative"></div>
-      </nav>
+      <nav className="about-nav"/>
 
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-title-wrapper">
-          <span className="subtitle">DESDE 2020</span>
+          <span className="subtitle">DESDE 2024</span>
           <h1>
             CONHEÇA MAIS <br />{" "}
             <span className="outline-text">SOBRE A PJMÓVEIS</span>
@@ -39,7 +34,7 @@ const About = () => {
         <div className="hero-main-image">
           {/* Imagem grande de um projeto icônico */}
           <div className="image-placeholder-large">
-            {/* Imagem fica aqui */}
+            <img src="/domo.jpg" alt="Projeto icônico" />
           </div>
           <div className="hero-experience-badge">INOVAÇÃO E DEDICAÇÃO</div>
         </div>
@@ -51,14 +46,19 @@ const About = () => {
           <div className="intro-text">
             <h2>Nossa Essência</h2>
             <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum.
+              Os projetos de mobiliário e estruturas são desenvolvidos
+              internamente pela própria empresa, em parceria com cada
+              cliente, garantindo um processo personalizado e alinhado às
+              suas necessidades e preferências. Por meio de visualizações em
+              3D, é possível acompanhar cada detalhe do projeto antes da
+              execução, proporcionando mais segurança e precisão em cada
+              etapa.
             </p>
-            <p>
-              Cras ultricies ligula sed magna dictum porta. Curabitur aliquet
-              quam id dui posuere blandit. Donec sollicitudin molestie
-              malesuada. Curabitur arcu erat, accumsan id imperdiet et,
-              porttitor at sem.
+            <p className="lead">
+              O resultado são peças exclusivas que unem criatividade,
+              funcionalidade e design diferenciado, desenvolvidas para se
+              integrar de forma harmoniosa a cada ambiente e refletir a
+              identidade e o estilo de cada cliente.
             </p>
           </div>
           <div className="intro-stats">
@@ -79,21 +79,38 @@ const About = () => {
         <div className="history-grid">
           <div className="history-image">
             <div className="image-box">
-              <img src="src/assets/images/logo-pjmoveis.jpg" alt="" />
+              <img src="/moveis/BUFFET_02.png" alt="" />
             </div>
           </div>
           <div className="history-text">
             <h2>Nossa Trajetória</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci
-              porta dapibus. Nulla porttitor accumsan tincidunt. Quisque velit
-              nisi, pretium ut lacinia in, elementum id enim.
+              A PJ Móveis Industriais e Estruturas Metálicas é especializada
+              no desenvolvimento e fabricação de móveis e estruturas
+              metálicas sob medida, combinando a resistência do metal com
+              a rusticidade e a sofisticação da madeira para criar peças
+              únicas, exclusivas e atemporais.
             </p>
             <p>
-              Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh.
-              Proin eget tortor risus. Vivamus suscipit tortor eget felis
-              porttitor volutpat.
+              Nosso compromisso é transformar ideias em projetos
+              personalizados, unindo qualidade, funcionalidade, design e
+              acabamento impecável em cada detalhe. Trabalhamos com
+              soluções que valorizam ambientes residenciais, comerciais e
+              corporativos, sempre alinhadas às necessidades e ao estilo de
+              cada cliente.
+            </p>
+            <p>
+              Pioneira em Campos dos Goytacazes na fabricação de mesas
+              resinadas em epóxi, a PJ Móveis Industriais busca consolidar
+              sua marca como referência em inovação, excelência e
+              autenticidade no segmento. Investimos continuamente em
+              técnicas modernas, materiais de alta qualidade e práticas
+              sustentáveis, garantindo produtos duráveis e de alto padrão.
+              Mais do que fabricar móveis e estruturas, acreditamos em
+              criar experiências, gerar valor e contribuir de forma positiva
+              para a sociedade, apoiando iniciativas que promovem inclusão
+              social, desenvolvimento e propósito através do design e da
+              transformação de espaços.
             </p>
           </div>
         </div>
