@@ -116,6 +116,31 @@ const About = () => {
         </div>
       </section>
 
+      <section className="more-about-section">
+        <div className="more-about-grid">
+          
+          <div className="more-about-text">
+            <h2>Mais Sobre Nós</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci
+              porta dapibus. Nulla porttitor accumsan tincidunt. Quisque velit
+              nisi, pretium ut lacinia in, elementum id enim.
+            </p>
+            <p>
+              Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh.
+              Proin eget tortor risus. Vivamus suscipit tortor eget felis
+              porttitor volutpat.
+            </p>
+          </div>
+          <div className="more-about-image">
+            <div className="image-box">
+              <img src="src/assets/images/logo-pjmoveis.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Seção MVV */}
       <section className="mvv-section">
         <div className="mvv-header">
