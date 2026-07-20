@@ -117,27 +117,62 @@ const About = () => {
       </section>
 
       <section className="more-about-section">
-        <div className="more-about-grid">
-          
-          <div className="more-about-text">
-            <h2>Mais Sobre Nós</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci
-              porta dapibus. Nulla porttitor accumsan tincidunt. Quisque velit
-              nisi, pretium ut lacinia in, elementum id enim.
-            </p>
-            <p>
-              Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh.
-              Proin eget tortor risus. Vivamus suscipit tortor eget felis
-              porttitor volutpat.
-            </p>
-          </div>
-          <div className="more-about-image">
-            <div className="image-box">
-              <img src="src/assets/images/logo-pjmoveis.jpg" alt="" />
+        <div className="more-about-container">
+            <h2>Nosso Diferencial</h2>
+
+            <div className="more-about-grid">
+
+                <div className="card-diferencial">
+                    <h3>Móveis sob medida</h3>
+                    <p>
+                        Cada projeto é desenvolvido de forma exclusiva,
+                        respeitando as necessidades, o estilo e a identidade de
+                        cada cliente.
+                    </p>
+                </div>
+
+                <div className="card-diferencial">
+                    <h3>Estruturas metálicas</h3>
+                    <p>
+                        Produzimos estruturas robustas e funcionais para ambientes
+                        residenciais, comerciais e corporativos.
+                    </p>
+                </div>
+
+                <div className="card-diferencial">
+                    <h3>Design exclusivo</h3>
+                    <p>
+                        Criamos peças que unem estética, conforto e
+                        funcionalidade, valorizando cada ambiente.
+                    </p>
+                </div>
+
+                <div className="card-diferencial">
+                    <h3>Alta durabilidade</h3>
+                    <p>
+                        Utilizamos estruturas em metal, madeira e materiais
+                        galvanizados para máxima resistência.
+                    </p>
+                </div>
+
+                <div className="card-diferencial">
+                    <h3>Qualidade garantida</h3>
+                    <p>
+                        Cada peça passa por rigorosos processos de conferência e
+                        acabamento antes da entrega.
+                    </p>
+                </div>
+
+                <div className="card-diferencial">
+                    <h3>Atendimento personalizado</h3>
+                    <p>
+                        Acompanhamos todas as etapas do projeto para garantir uma
+                        experiência única ao cliente.
+                    </p>
+                </div>
+
             </div>
-          </div>
+
         </div>
       </section>
 

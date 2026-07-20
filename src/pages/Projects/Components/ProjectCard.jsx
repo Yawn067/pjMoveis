@@ -5,13 +5,13 @@ const ProjectCard = ({ produto }) => {
     <div className="product-card">
       <div className="product-image-wrapper">
         <img src={produto.img} alt={produto.nome} />
-        <div className="product-price-badge">R$ {produto.preco}</div>
+        {/*<div className="product-price-badge">R$ {produto.preco}</div>*/}
       </div>
 
       <div className="product-info">
         <h3>{produto.nome}</h3>
 
-        <div className="product-specs">
+        {/*<div className="product-specs">
           <div className="spec-item">
             <span className="spec-label">Largura</span>
             <span className="spec-value">{produto.largura}cm</span>
@@ -36,6 +36,7 @@ const ProjectCard = ({ produto }) => {
             />
           </svg>
         </a>
+        */}
       </div>
     </div>
   );

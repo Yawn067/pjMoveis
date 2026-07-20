@@ -1,5 +1,6 @@
 import "./Projects.css";
 import ProjectsCarousel from "./Components/ProjectsCarousel";
+import ContactSection from "../../components/ContactSection/ContactSection";
 
 const Projects = () => {
   const categorias = [
@@ -12,7 +13,7 @@ const Projects = () => {
         {
           id: 1,
           nome: "Mesa Industrial Kraft",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          img: "mobCorporativo1.jpg",
           preco: "1.250,00",
           largura: 120,
           altura: 75,
@@ -20,30 +21,21 @@ const Projects = () => {
         },
         {
           id: 2,
-          nome: "Estante Metálica Pro",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          nome: "Mesa Madeira Pro",
+          img: "mobCorporativo2.png",
           preco: "980,00",
           largura: 100,
           altura: 180,
           profundidade: 40,
         },
         {
-          id: 5,
+          id: 3,
           nome: "Cadeira Operacional Steel",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          img: "mobCorporativo3.png",
           preco: "450,00",
           largura: 60,
           altura: 110,
           profundidade: 60,
-        },
-        {
-          id: 6,
-          nome: "Armário Multiuso Iron",
-          img: "src/assets/images/logo-pjmoveis.jpg",
-          preco: "1.100,00",
-          largura: 90,
-          altura: 200,
-          profundidade: 50,
         },
       ],
     },
@@ -54,40 +46,66 @@ const Projects = () => {
         "O design das fábricas adaptado para o aconchego do lar. Estantes, mesas e suportes com acabamento refinado.",
       produtos: [
         {
-          id: 3,
-          nome: "Estante Loft",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          id: 4,
+          nome: "Armário Loft",
+          img: "mobIndustrial.png",
           preco: "750,00",
           largura: 80,
           altura: 160,
           profundidade: 30,
         },
         {
-          id: 4,
-          nome: "Mesa de Jantar Factory",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          id: 5,
+          nome: "Bancada Factory",
+          img: "mobIndustrial2.png",
           preco: "1.500,00",
           largura: 150,
           altura: 75,
           profundidade: 90,
         },
         {
-          id: 5,
-          nome: "Cadeira Operacional Steel",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          id: 6,
+          nome: "cabeceira de cama",
+          img: "mobIndustrial3.png",
           preco: "450,00",
           largura: 60,
           altura: 110,
           profundidade: 60,
         },
         {
-          id: 6,
-          nome: "Armário Multiuso Iron",
-          img: "src/assets/images/logo-pjmoveis.jpg",
+          id: 7,
+          nome: "Estante Multiuso Iron",
+          img: "mobIndustrial4.png",
           preco: "1.100,00",
           largura: 90,
           altura: 200,
           profundidade: 50,
+        },
+      ],
+    },
+     {
+      id: 3,
+      titulo: "Outros Projetos",
+      descricao:
+        "Conheça mais um pouco do nosso portfólio, com soluções personalizadas para cada necessidade.",
+      produtos: [
+        {
+          id: 8,
+          nome: "Domo",
+          img: "/domo.jpg",
+          preco: "1.250,00",
+          largura: 120,
+          altura: 75,
+          profundidade: 60,
+        },
+        {
+          id: 9,
+          nome: "Estante Metálica Pro",
+          img: "src/assets/images/logo-pjmoveis.jpg",
+          preco: "980,00",
+          largura: 100,
+          altura: 180,
+          profundidade: 40,
         },
       ],
     },
@@ -121,7 +139,7 @@ const Projects = () => {
               <h2>{cat.titulo}</h2>
               <div className="divider"></div>
               <p>{cat.descricao}</p>
-              <button className="view-more">Ver Detalhes</button>
+              {/*  <button className="view-more">Ver Detalhes</button>*/}
             </div>
           </div>
 
@@ -139,24 +157,7 @@ const Projects = () => {
         </section>
       ))}
 
-      <section className="projects-cta">
-        <div className="cta-box">
-          <h3>Tem um projeto especial em mente? Entre em contato!</h3>
-          <p>Executamos projetos personalizados sob medida para sua empresa.</p>
-          
-          <div className="cta-social-wrapper">
-            <a href="" target="_blank" rel="noreferrer" className="cta-link whatsapp">
-              <span>WHATSAPP</span>
-            </a>
-            <a href="https://www.instagram.com/pjmoveis_estruturas_metalicas/" target="_blank" rel="noreferrer" className="cta-link instagram">
-              <span>INSTAGRAM</span>
-            </a>
-            <a href="mailto:colocaremailaqui" className="cta-link email">
-              <span>E-MAIL</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
     </div>
   );
 };

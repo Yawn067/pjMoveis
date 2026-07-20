@@ -16,7 +16,7 @@
 .product-image-wrapper {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 350px;
   background-color: #eee; /* Cor de fallback */
   overflow: hidden;
 }
