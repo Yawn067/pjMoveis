@@ -346,3 +346,68 @@
     height: 350px;
   }
 }
+/* ==========================================================
+   ANIMAÇÕES DISCRETAS E FLUIDAS
+   ========================================================== */
+
+/* Keyframe para entrada suave */
+@keyframes softFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe para pulso suave do badge */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 1. Entrada suave dos blocos principais ao carregar */
+.hero-title-wrapper {
+  animation: softFadeUp 0.8s ease-out forwards;
+}
+
+.hero-main-image {
+  animation: softFadeUp 0.8s ease-out 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* 2. Animação contínua e muito discreta no selo "Inovação e Dedicação" */
+.hero-experience-badge {
+  animation: subtleFloat 4s ease-in-out infinite;
+  transition: box-shadow 0.3s ease;
+}
+
+/* 3. Micro-interação nas imagens ao passar o mouse */
+.image-placeholder-large,
+.image-box {
+  overflow: hidden; /* Garante que o zoom não ultrapasse as bordas */
+}
+
+.image-placeholder-large img,
+.image-box img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-placeholder-large:hover img,
+.image-box:hover img {
+  transform: scale(1.03); /* Zoom leve de 3% */
+}
+
+/* 4. Suavização das transições já existentes */
+.card-diferencial,
+.mvv-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease, 
+              color 0.3s ease;
+}

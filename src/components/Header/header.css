@@ -4,13 +4,13 @@
     z-index: 50;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
 
     margin: 0 auto;
-    padding: 16px 32px;
+    padding: 16px 20px 16px 30px;
 
     background-color: #ffffff;
     border-bottom: 1px solid #d1d5db;
@@ -21,12 +21,18 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    
 }
 
 .cabecalho-logo img {
     height: 50px;
     width: auto;
     display: block;
+    
+}
+
+.header-esquerda .header-direita{
+    display: flex;
 }
 
 /* Opções do menu */
@@ -52,4 +58,32 @@
 .cabecalho-op.ativo {
     color: #00095C;
     border-bottom-color: #00095C;
+}
+
+.contact_button{
+    background-color: #00095C;
+    color:whitesmoke;
+    font-size: 26px;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 2px solid transparent;
+    border-radius: 20px;
+   transition: 0.2s ease-in;
+    
+}
+
+
+.contact_button:active{
+    background-color: whitesmoke;
+    color: #00095C;
+    border-bottom: 2px solid transparent;
+
+}
+
+.contact_button:hover{
+    transform: scale(1.03);
+    backface-visibility: hidden;
+
+}
+html{
+    scroll-behavior: smooth;
 }

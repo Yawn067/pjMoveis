@@ -1,5 +1,47 @@
+import React, { useState, useEffect, useRef } from "react";
 import "./About.css";
 import ContactSection from "../../components/ContactSection/ContactSection";
+
+// Componente auxiliar para a animação do número
+const AnimatedNumber = ({ target, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          let start = 0;
+          const duration = 2000; // Duração da animação em milissegundos (2s)
+          const steps = 60;
+          const stepTime = duration / steps;
+          const increment = target / steps;
+
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(start));
+            }
+          }, stepTime);
+        }
+      },
+      { threshold: 0.5 } // Inicia quando 50% da área do número estiver visível
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [target]);
+
+  return <span ref={elementRef}>{count}{suffix}</span>;
+};
 
 const About = () => {
   const mvv = [
@@ -32,7 +74,6 @@ const About = () => {
           </h1>
         </div>
         <div className="hero-main-image">
-          {/* Imagem grande de um projeto icônico */}
           <div className="image-placeholder-large">
             <img src="/domo.jpg" alt="Projeto icônico" />
           </div>
@@ -40,7 +81,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Introdução - Quem somos */}
+      {/* Introdução - Quem somos (COM ANIMAÇÃO DE NÚMEROS) */}
       <section className="intro-section">
         <div className="intro-grid">
           <div className="intro-text">
@@ -63,11 +104,15 @@ const About = () => {
           </div>
           <div className="intro-stats">
             <div className="stat-item">
-              <span>500+</span>
+              <span>
+                <AnimatedNumber target={500} suffix="+" />
+              </span>
               <p>Projetos Entregues</p>
             </div>
             <div className="stat-item">
-              <span>100%</span>
+              <span>
+                <AnimatedNumber target={100} suffix="%" />
+              </span>
               <p>Produção Própria</p>
             </div>
           </div>
@@ -118,61 +163,58 @@ const About = () => {
 
       <section className="more-about-section">
         <div className="more-about-container">
-            <h2>Nosso Diferencial</h2>
+          <h2>Nosso Diferencial</h2>
 
-            <div className="more-about-grid">
-
-                <div className="card-diferencial">
-                    <h3>Móveis sob medida</h3>
-                    <p>
-                        Cada projeto é desenvolvido de forma exclusiva,
-                        respeitando as necessidades, o estilo e a identidade de
-                        cada cliente.
-                    </p>
-                </div>
-
-                <div className="card-diferencial">
-                    <h3>Estruturas metálicas</h3>
-                    <p>
-                        Produzimos estruturas robustas e funcionais para ambientes
-                        residenciais, comerciais e corporativos.
-                    </p>
-                </div>
-
-                <div className="card-diferencial">
-                    <h3>Design exclusivo</h3>
-                    <p>
-                        Criamos peças que unem estética, conforto e
-                        funcionalidade, valorizando cada ambiente.
-                    </p>
-                </div>
-
-                <div className="card-diferencial">
-                    <h3>Alta durabilidade</h3>
-                    <p>
-                        Utilizamos estruturas em metal, madeira e materiais
-                        galvanizados para máxima resistência.
-                    </p>
-                </div>
-
-                <div className="card-diferencial">
-                    <h3>Qualidade garantida</h3>
-                    <p>
-                        Cada peça passa por rigorosos processos de conferência e
-                        acabamento antes da entrega.
-                    </p>
-                </div>
-
-                <div className="card-diferencial">
-                    <h3>Atendimento personalizado</h3>
-                    <p>
-                        Acompanhamos todas as etapas do projeto para garantir uma
-                        experiência única ao cliente.
-                    </p>
-                </div>
-
+          <div className="more-about-grid">
+            <div className="card-diferencial">
+              <h3>Móveis sob medida</h3>
+              <p>
+                Cada projeto é desenvolvido de forma exclusiva,
+                respeitando as necessidades, o estilo e a identidade de
+                cada cliente.
+              </p>
             </div>
 
+            <div className="card-diferencial">
+              <h3>Estruturas metálicas</h3>
+              <p>
+                Produzimos estruturas robustas e funcionais para ambientes
+                residenciais, comerciais e corporativos.
+              </p>
+            </div>
+
+            <div className="card-diferencial">
+              <h3>Design exclusivo</h3>
+              <p>
+                Criamos peças que unem estética, conforto e
+                funcionalidade, valorizando cada ambiente.
+              </p>
+            </div>
+
+            <div className="card-diferencial">
+              <h3>Alta durabilidade</h3>
+              <p>
+                Utilizamos estruturas em metal, madeira e materiais
+                galvanizados para máxima resistência.
+              </p>
+            </div>
+
+            <div className="card-diferencial">
+              <h3>Qualidade garantida</h3>
+              <p>
+                Cada peça passa por rigorosos processos de conferência e
+                acabamento antes da entrega.
+              </p>
+            </div>
+
+            <div className="card-diferencial">
+              <h3>Atendimento personalizado</h3>
+              <p>
+                Acompanhamos todas as etapas do projeto para garantir uma
+                experiência única ao cliente.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -183,18 +225,17 @@ const About = () => {
             Missão, Visão <br />& Valores
           </h2>
         </div>
-        <section className="mvv-section">
-          <div className="mvv-grid">
-            {mvv.map((item, index) => (
-              <div key={index} className="mvv-card">
-                <div className="mvv-icon">{item.title[0]}</div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <div className="mvv-grid">
+          {mvv.map((item, index) => (
+            <div key={index} className="mvv-card">
+              <div className="mvv-icon">{item.title[0]}</div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
       </section>
+      
       <ContactSection />
     </div>
   );

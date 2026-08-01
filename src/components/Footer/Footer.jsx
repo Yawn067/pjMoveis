@@ -3,7 +3,7 @@ import './footer.css';
 function Footer() {
   return (
     <footer>
-      <p> 2026 Our Website. All rights reserved.</p>
+      <p className='aurea_mark'> DESENVOLVIDO PELA AUREA © 2026</p>
     </footer>
   );
 }

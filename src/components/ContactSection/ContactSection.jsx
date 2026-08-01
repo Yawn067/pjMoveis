@@ -4,8 +4,8 @@ import { MdEmail } from "react-icons/md";
 function ContactSection() {
   return (
     <section className="home-contato">
-      <div className="home-contato-overlay">
-        <h2>Contato</h2>
+      <div id = "contato-ancora" className="home-contato-overlay">
+        <h2>Contato </h2>
         <p>
           Quer construir o móvel do seu sonho? Fale conosco para um orçamento
           personalizado!
@@ -17,7 +17,7 @@ function ContactSection() {
             className="contato-item"
           >
             <img src="/images/WhatsApp_icon.png" alt="WhatsApp" />
-            <span>22 99964-2402</span>
+            <span>Paulo Junio</span>
           </a>
 
           <a
