@@ -1,20 +1,60 @@
 footer {
     width: 100%;
     height: 100px;
-    background-color: #ffff;
-    text-align: center;
-    padding: 10px 0px;
-    color: gray;
-    transition: 0.5s ease;
+    background: #fff;
+    color: #808080;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
-.aurea_mark:hover{
-    color: #00095C;
-    font-size: 18px;
-    
+/* Linha superior */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
 
+    width: 0;
+    height: 2px;
+    background: #FF935E;
+
+    transform: translateX(-50%);
+    transition: width .5s ease;
+}
+
+footer:hover::before {
+    width: 180px;
+}
+
+.aurea_mark {
+    position: relative;
+    color: gray;
+    text-decoration: none;
+    transition: color .35s ease;
+}
+
+.aurea_mark::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+
+    width: 0;
+    height: 2px;
+    background: #00095C;
+
+    transform: translateX(-50%);
+    transition: width .35s ease;
+}
+
+.aurea_mark:hover {
+    color: #00095C;
+}
+
+.aurea_mark:hover::after {
+    width: 100%;
 }

@@ -14,11 +14,10 @@ function Header() {
           <NavLink className={({ isActive }) => isActive ? "cabecalho-op ativo" : "cabecalho-op"} to="/">Início</NavLink>
           <NavLink className={({ isActive }) => isActive ? "cabecalho-op ativo" : "cabecalho-op"} to="/about">Sobre Nós</NavLink>
           <NavLink className={({ isActive }) => isActive ? "cabecalho-op ativo" : "cabecalho-op"} to="/projetos">Projetos</NavLink>
-          
         </nav>
         <div className="header-direita">
            <a className= "contact_button" href="#contato-ancora" > Contato</a>
-           </div>
+        </div>
        
     </header>
   );

@@ -1,11 +1,35 @@
 import "./ContactSection.css";
 import { MdEmail } from "react-icons/md";
+import { useEffect, useRef } from "react";
 
 function ContactSection() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="home-contato">
-      <div id = "contato-ancora" className="home-contato-overlay">
-        <h2>Contato </h2>
+    <section className="home-contato" ref={sectionRef}>
+      <div id="contato-ancora" className="home-contato-overlay">
+        <h2>Contato</h2>
+
         <p>
           Quer construir o móvel do seu sonho? Fale conosco para um orçamento
           personalizado!
