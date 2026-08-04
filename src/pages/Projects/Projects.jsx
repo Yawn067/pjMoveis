@@ -85,9 +85,9 @@ const Projects = () => {
     },
      {
       id: 3,
-      titulo: "Outros Projetos",
+      titulo: "Móveis para Hospedagens",
       descricao:
-        "Conheça mais um pouco do nosso portfólio, com soluções personalizadas para cada necessidade.",
+        "Projetos autorais desenhados para elevar o padrão de conforto e sofisticação do seu meio de hospedagem.",
       produtos: [
         {
           id: 8,
@@ -97,15 +97,64 @@ const Projects = () => {
           largura: 120,
           altura: 75,
           profundidade: 60,
+          descricao: `Apresentado na Mercado Decor 2025, o Domo da PJ Móveis Industriais e Estruturas Metálicas une arquitetura, conforto e sofisticação em um projeto exclusivo. Com estrutura em madeira e design marcante, é a escolha ideal para hospedagens, áreas de lazer, espaços de contemplação e projetos comerciais.
+
+Seu formato geométrico proporciona um ambiente moderno, acolhedor e integrado à natureza, aliando beleza, resistência e durabilidade.
+
+Além do modelo apresentado, a PJ desenvolve projetos totalmente personalizados, adaptando dimensões, acabamentos e detalhes para criar um domo exclusivo, pensado para o seu espaço e suas necessidades.`,
         },
         {
           id: 9,
-          nome: "Estante Metálica Pro",
+          nome: "Chalé",
           img: "src/assets/images/logo-pjmoveis.jpg",
           preco: "980,00",
           largura: 100,
           altura: 180,
           profundidade: 40,
+        },
+      ],
+    },
+     {
+      id: 2,
+      titulo: "Projetos Versáteis",
+      descricao:
+        "Soluções inteligentes desenhadas para otimizar espaços e integrar funções com elegância.",
+      produtos: [
+        {
+          id: 4,
+          nome: "Armário Loft",
+          img: "mobIndustrial.png",
+          preco: "750,00",
+          largura: 80,
+          altura: 160,
+          profundidade: 30,
+        },
+        {
+          id: 5,
+          nome: "Bancada Factory",
+          img: "mobIndustrial2.png",
+          preco: "1.500,00",
+          largura: 150,
+          altura: 75,
+          profundidade: 90,
+        },
+        {
+          id: 6,
+          nome: "cabeceira de cama",
+          img: "mobIndustrial3.png",
+          preco: "450,00",
+          largura: 60,
+          altura: 110,
+          profundidade: 60,
+        },
+        {
+          id: 7,
+          nome: "Estante Multiuso Iron",
+          img: "mobIndustrial4.png",
+          preco: "1.100,00",
+          largura: 90,
+          altura: 200,
+          profundidade: 50,
         },
       ],
     },

@@ -18,7 +18,7 @@
   width: 100%;
   height: 350px;
   background-color: #eee; /* Cor de fallback */
-  overflow: hidden;
+  overflow: hidden; /* Mantém o overlay escondido quando fora do card */
 }
 
 .product-image-wrapper img {
@@ -37,6 +37,52 @@
   font-weight: 800;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* Overlay de transição suave de baixo para cima (Modal do Hover) */
+.product-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary); /* Azul escuro idêntico às imagens de referência */
+  color: var(--white);
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+
+  /* Posição inicial: 100% deslocado para baixo e invisível */
+  transform: translateY(100%);
+  opacity: 0;
+
+  /* Efeito de transição suave */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+/* Exibe a overlay deslizante ao passar o mouse sobre o card */
+.product-card:hover .product-card-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-card-overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.product-card-overlay p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--white);
+  opacity: 0.95;
 }
 
 /* Informações e Medidas */

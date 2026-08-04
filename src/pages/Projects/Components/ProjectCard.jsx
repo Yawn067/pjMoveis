@@ -6,6 +6,15 @@ const ProjectCard = ({ produto }) => {
       <div className="product-image-wrapper">
         <img src={produto.img} alt={produto.nome} />
         {/*<div className="product-price-badge">R$ {produto.preco}</div>*/}
+
+        {/* Overlay de transição suave de baixo para cima */}
+        <div className="product-card-overlay">
+          <h3>{produto.nome}</h3>
+          <p>
+            {produto.descricao ||
+              "Descrição do projeto com detalhes sobre personalização, materiais e acabamento."}
+          </p>
+        </div>
       </div>
 
       <div className="product-info">
