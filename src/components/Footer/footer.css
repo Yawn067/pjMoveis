@@ -1,60 +1,248 @@
-footer {
-    width: 100%;
-    height: 100px;
-    background: #fff;
-    color: #808080;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
+/* Container pai */
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Linha superior */
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
+/* ==========================================
+   FAIXA BRANCA DA ÁUREA NO TOPO
+   ========================================== */
+.aurea-top-bar {
+  width: 100%;
+  height: 50px; /* Altura reduzida e proporcional */
+  background: #ffffff;
+  color: #808080;
 
-    width: 0;
-    height: 2px;
-    background: #FF935E;
+  display: flex;
+  justify-content: center; /* Centraliza o texto horizontalmente */
+  align-items: center;     /* Centraliza o texto verticalmente */
+  text-align: center;
 
-    transform: translateX(-50%);
-    transition: width .5s ease;
+  margin-top: 40px;    /* Espaço acima em relação ao conteúdo da página */
+  margin-bottom: 20px; /* Espaço abaixo em relação ao rodapé escuro */
+
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-footer:hover::before {
-    width: 180px;
+/* Linha superior animada */
+.aurea-top-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 0;
+  height: 2px;
+  background: #FF935E;
+
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+}
+
+.aurea-top-bar:hover::before {
+  width: 180px;
 }
 
 .aurea_mark {
-    position: relative;
-    color: gray;
-    text-decoration: none;
-    transition: color .35s ease;
+  position: relative;
+  color: #666666;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  transition: color 0.35s ease;
 }
 
 .aurea_mark::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
 
-    width: 0;
-    height: 2px;
-    background: #00095C;
+  width: 0;
+  height: 2px;
+  background: #00095C;
 
-    transform: translateX(-50%);
-    transition: width .35s ease;
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
 }
 
 .aurea_mark:hover {
-    color: #00095C;
+  color: #00095C;
 }
 
 .aurea_mark:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+/* ==========================================
+   RODAPÉ ESCURO PRINCIPAL (INSTITUCIONAL / SEO)
+   ========================================== */
+.main-footer {
+  background-color: #03080e;
+  color: #a0aec0;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 80px 5% 30px 5%;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-wrapper {
+  display: flex;  
+  margin-bottom: 25px;
+  height: 100px;
+  width: 170px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #8c9ba5;
+  max-width: 440px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para Cidade e Estado alinhados corretamente */
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a0aec0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.footer-location svg {
+  color: #FF935E;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-box {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #2d3748;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-box:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1a202c;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: #8c9ba5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom-bar {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid #1a202c;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bottom-left p {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.bottom-left .sub-copyright {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.bottom-right .precision-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
