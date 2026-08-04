@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer-wrapper">
       {/* 1. Faixa Branca de Crédito Áurea no TOPO (Acima do Footer Escuro) */}
       <div className="aurea-top-bar">
-        <a href="https://www.instagram.com/aureaej/" className="aurea_mark">
+        <a href="https://www.instagram.com/aureaej/" target = "blank" className="aurea_mark">
           DESENVOLVIDO PELA AUREA © 2026
         </a>
       </div>
