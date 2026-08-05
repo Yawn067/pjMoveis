@@ -1,0 +1,90 @@
+.domo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  z-index: 999;
+}
+
+.domo-modal-content {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--white);
+  padding: 40px 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  position: relative;
+  color: var(--primary);
+  animation: domoModalFade 0.25s ease-out;
+}
+
+.domo-modal-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+.domo-modal-content p {
+  color: #2a2a2a;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.domo-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.domo-modal-close:hover {
+  color: var(--secondary);
+}
+
+.domo-modal-button {
+  appearance: none;
+  border: none;
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 18px 26px;
+  border-radius: 30px;
+  box-shadow: 18px 18px 0px var(--primary);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.domo-modal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 22px 22px 0px rgba(0, 33, 55, 0.85);
+}
+
+.domo-modal-button:focus-visible {
+  outline: 3px solid rgba(0, 33, 55, 0.3);
+  outline-offset: 4px;
+}
+
+@keyframes domoModalFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

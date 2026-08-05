@@ -11,8 +11,8 @@
 .aurea-top-bar {
   width: 100%;
   height: 50px; /* Altura reduzida e proporcional */
-  background: #ffffff;
-  color: #808080;
+  background: transparent;
+  color: #eeeeee;
 
   display: flex;
   justify-content: center; /* Centraliza o texto horizontalmente */
@@ -20,7 +20,7 @@
   text-align: center;
 
   margin-top: 40px;    /* Espaço acima em relação ao conteúdo da página */
-  margin-bottom: 20px; /* Espaço abaixo em relação ao rodapé escuro */
+   /* Espaço abaixo em relação ao rodapé escuro */
 
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -35,7 +35,6 @@
 
   width: 0;
   height: 2px;
-  background: #FF935E;
 
   transform: translateX(-50%);
   transition: width 0.5s ease;
@@ -47,7 +46,7 @@
 
 .aurea_mark {
   position: relative;
-  color: #666666;
+  color: #f0f0f0;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 600;
@@ -64,14 +63,14 @@
 
   width: 0;
   height: 2px;
-  background: #00095C;
+  background: #dadbe7;
 
   transform: translateX(-50%);
   transition: width 0.35s ease;
 }
 
 .aurea_mark:hover {
-  color: #00095C;
+  color: #b5bcfc;
 }
 
 .aurea_mark:hover::after {
@@ -94,7 +93,7 @@
   display: grid;
   grid-template-columns: 2fr 1.2fr 1.2fr;
   gap: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .footer-brand-col {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./About.css";
 import ContactSection from "../../components/ContactSection/ContactSection";
+import DomoModal from "../../components/DomoModal/DomoModal";
 
 // Componente auxiliar para a animação do número
 const AnimatedNumber = ({ target, suffix = "" }) => {
@@ -30,7 +31,7 @@ const AnimatedNumber = ({ target, suffix = "" }) => {
           }, stepTime);
         }
       },
-      { threshold: 0.5 } // Inicia quando 50% da área do número estiver visível
+      { threshold: 0.5 }, // Inicia quando 50% da área do número estiver visível
     );
 
     if (elementRef.current) {
@@ -40,10 +41,17 @@ const AnimatedNumber = ({ target, suffix = "" }) => {
     return () => observer.disconnect();
   }, [target]);
 
-  return <span ref={elementRef}>{count}{suffix}</span>;
+  return (
+    <span ref={elementRef}>
+      {count}
+      {suffix}
+    </span>
+  );
 };
 
 const About = () => {
+  const [isDomoModalOpen, setIsDomoModalOpen] = useState(false);
+
   const mvv = [
     {
       title: "Missão",
@@ -62,7 +70,7 @@ const About = () => {
   return (
     <div className="modern-about">
       {/* Header com Logo */}
-      <nav className="about-nav"/>
+      <nav className="about-nav" />
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -77,9 +85,19 @@ const About = () => {
           <div className="image-placeholder-large">
             <img src="/domo.jpg" alt="Projeto icônico" />
           </div>
-          <div className="hero-experience-badge">INOVAÇÃO E DEDICAÇÃO</div>
+          <button
+            type="button"
+            className="hero-experience-badge domo-modal-button"
+            onClick={() => setIsDomoModalOpen(true)}
+          >
+            Saiba Mais
+          </button>
         </div>
       </section>
+      <DomoModal
+        isOpen={isDomoModalOpen}
+        onClose={() => setIsDomoModalOpen(false)}
+      />
 
       {/* Introdução - Quem somos (COM ANIMAÇÃO DE NÚMEROS) */}
       <section className="intro-section">
@@ -88,12 +106,11 @@ const About = () => {
             <h2>Nossa Essência</h2>
             <p className="lead">
               Os projetos de mobiliário e estruturas são desenvolvidos
-              internamente pela própria empresa, em parceria com cada
-              cliente, garantindo um processo personalizado e alinhado às
-              suas necessidades e preferências. Por meio de visualizações em
-              3D, é possível acompanhar cada detalhe do projeto antes da
-              execução, proporcionando mais segurança e precisão em cada
-              etapa.
+              internamente pela própria empresa, em parceria com cada cliente,
+              garantindo um processo personalizado e alinhado às suas
+              necessidades e preferências. Por meio de visualizações em 3D, é
+              possível acompanhar cada detalhe do projeto antes da execução,
+              proporcionando mais segurança e precisão em cada etapa.
             </p>
             <p className="lead">
               O resultado são peças exclusivas que unem criatividade,
@@ -130,32 +147,30 @@ const About = () => {
           <div className="history-text">
             <h2>Nossa Trajetória</h2>
             <p>
-              A PJ Móveis Industriais e Estruturas Metálicas é especializada
-              no desenvolvimento e fabricação de móveis e estruturas
-              metálicas sob medida, combinando a resistência do metal com
-              a rusticidade e a sofisticação da madeira para criar peças
-              únicas, exclusivas e atemporais.
+              A PJ Móveis Industriais e Estruturas Metálicas é especializada no
+              desenvolvimento e fabricação de móveis e estruturas metálicas sob
+              medida, combinando a resistência do metal com a rusticidade e a
+              sofisticação da madeira para criar peças únicas, exclusivas e
+              atemporais.
             </p>
             <p>
-              Nosso compromisso é transformar ideias em projetos
-              personalizados, unindo qualidade, funcionalidade, design e
-              acabamento impecável em cada detalhe. Trabalhamos com
-              soluções que valorizam ambientes residenciais, comerciais e
-              corporativos, sempre alinhadas às necessidades e ao estilo de
-              cada cliente.
+              Nosso compromisso é transformar ideias em projetos personalizados,
+              unindo qualidade, funcionalidade, design e acabamento impecável em
+              cada detalhe. Trabalhamos com soluções que valorizam ambientes
+              residenciais, comerciais e corporativos, sempre alinhadas às
+              necessidades e ao estilo de cada cliente.
             </p>
             <p>
-              Pioneira em Campos dos Goytacazes na fabricação de mesas
-              resinadas em epóxi, a PJ Móveis Industriais busca consolidar
-              sua marca como referência em inovação, excelência e
-              autenticidade no segmento. Investimos continuamente em
-              técnicas modernas, materiais de alta qualidade e práticas
-              sustentáveis, garantindo produtos duráveis e de alto padrão.
-              Mais do que fabricar móveis e estruturas, acreditamos em
-              criar experiências, gerar valor e contribuir de forma positiva
-              para a sociedade, apoiando iniciativas que promovem inclusão
-              social, desenvolvimento e propósito através do design e da
-              transformação de espaços.
+              Pioneira em Campos dos Goytacazes na fabricação de mesas resinadas
+              em epóxi, a PJ Móveis Industriais busca consolidar sua marca como
+              referência em inovação, excelência e autenticidade no segmento.
+              Investimos continuamente em técnicas modernas, materiais de alta
+              qualidade e práticas sustentáveis, garantindo produtos duráveis e
+              de alto padrão. Mais do que fabricar móveis e estruturas,
+              acreditamos em criar experiências, gerar valor e contribuir de
+              forma positiva para a sociedade, apoiando iniciativas que promovem
+              inclusão social, desenvolvimento e propósito através do design e
+              da transformação de espaços.
             </p>
           </div>
         </div>
@@ -169,9 +184,8 @@ const About = () => {
             <div className="card-diferencial">
               <h3>Móveis sob medida</h3>
               <p>
-                Cada projeto é desenvolvido de forma exclusiva,
-                respeitando as necessidades, o estilo e a identidade de
-                cada cliente.
+                Cada projeto é desenvolvido de forma exclusiva, respeitando as
+                necessidades, o estilo e a identidade de cada cliente.
               </p>
             </div>
 
@@ -186,16 +200,16 @@ const About = () => {
             <div className="card-diferencial">
               <h3>Design exclusivo</h3>
               <p>
-                Criamos peças que unem estética, conforto e
-                funcionalidade, valorizando cada ambiente.
+                Criamos peças que unem estética, conforto e funcionalidade,
+                valorizando cada ambiente.
               </p>
             </div>
 
             <div className="card-diferencial">
               <h3>Alta durabilidade</h3>
               <p>
-                Utilizamos estruturas em metal, madeira e materiais
-                galvanizados para máxima resistência.
+                Utilizamos estruturas em metal, madeira e materiais galvanizados
+                para máxima resistência.
               </p>
             </div>
 
@@ -235,7 +249,7 @@ const About = () => {
           ))}
         </div>
       </section>
-      
+
       <ContactSection />
     </div>
   );

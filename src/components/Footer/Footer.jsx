@@ -7,14 +7,7 @@ function Footer() {
 
   return (
     <footer className="footer-wrapper">
-      {/* 1. Faixa Branca de Crédito Áurea no TOPO (Acima do Footer Escuro) */}
-      <div className="aurea-top-bar">
-        <a href="https://www.instagram.com/aureaej/" target = "blank" className="aurea_mark">
-          DESENVOLVIDO PELA AUREA © 2026
-        </a>
-      </div>
-
-      {/* 2. Rodapé Escuro Institucional e SEO */}
+      {/* 1. Rodapé Escuro Institucional e SEO */}
       <div className="main-footer">
         {/* Marcação de SEO Local (JSON-LD) */}
         <script
@@ -87,6 +80,11 @@ function Footer() {
         </div>
 
         {/* Faixa Inferior do Bloco Escuro */}
+        <div className="aurea-top-bar">
+          <a href="https://www.instagram.com/aureaej/" target = "blank" className="aurea_mark">
+            DESENVOLVIDO PELA AUREA © 2026
+          </a>
+        </div>
         <div className="footer-bottom-bar">
           <div className="bottom-left">
             <p>© 2026 PJ Móveis.</p>
@@ -94,7 +92,7 @@ function Footer() {
               PJ Móveis Industriais Ltda. | CNPJ: 00.000.000/0001-00 | {cidade}, {estado}
             </p>
           </div>
-
+        
           <div className="bottom-right">
             <span className="precision-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
