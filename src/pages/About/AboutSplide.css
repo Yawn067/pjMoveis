@@ -1,0 +1,41 @@
+.about-splide-container {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.about-splide {
+  height: 100%;
+}
+
+.about-splide .splide__track,
+.about-splide .splide__list,
+.about-splide .splide__slide {
+  height: 100%;
+}
+
+.about-splide-slide {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-splide-image {
+  width: 800px;
+  height: 600px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.about-splide .splide__arrows {
+  z-index: 2;
+}
+
+.about-splide .splide__pagination {
+  bottom: 18px;
+}

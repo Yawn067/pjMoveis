@@ -92,7 +92,7 @@ const Projects = () => {
         {
           id: 8,
           nome: "Domo",
-          img: "/domo.jpg",
+          img: "/domo/domo.jpg",
           preco: "1.250,00",
           largura: 120,
           altura: 75,

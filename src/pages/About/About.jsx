@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 import "./About.css";
+import "./AboutSplide.css";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import DomoModal from "../../components/DomoModal/DomoModal";
 
@@ -82,9 +85,49 @@ const About = () => {
           </h1>
         </div>
         <div className="hero-main-image">
-          <div className="image-placeholder-large">
-            <img src="/domo.jpg" alt="Projeto icônico" />
+          <div className="image-placeholder-large about-splide-container">
+            <Splide
+              className="about-splide"
+              options={{
+                type: "loop",
+                perPage: 1,
+                gap: "0",
+                autoplay: true,
+                interval: 5000,
+                pauseOnHover: true,
+                arrows: true,
+                pagination: false,
+                width: "100%",
+                breakpoints: {
+                  1024: {
+                    perPage: 1,
+                  },
+                  640: {
+                    perPage: 1,
+                  },
+                },
+              }}
+            >
+              {[
+                "/domo/domo.jpg",
+                "/domo/domo2.jpeg",
+                "/domo/domo3.jpeg",
+                "/domo/domo4.jpeg",
+                "/domo/domo5.jpeg",
+              ].map((src, index) => (
+                <SplideSlide key={index}>
+                  <div className="about-splide-slide">
+                    <img
+                      className="about-splide-image"
+                      src={src}
+                      alt={`PJMóveis domo ${index + 1}`}
+                    />
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
           </div>
+
           <button
             type="button"
             className="hero-experience-badge domo-modal-button"
