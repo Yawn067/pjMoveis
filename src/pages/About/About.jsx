@@ -108,12 +108,12 @@ const About = () => {
                 },
               }}
             >
-              {[
-                "/domo/domo.jpg",
-                "/domo/domo2.jpeg",
+              {[               
                 "/domo/domo3.jpeg",
+                "/domo/domo2.jpeg",
                 "/domo/domo4.jpeg",
                 "/domo/domo5.jpeg",
+                "/domo/domo.jpg",
               ].map((src, index) => (
                 <SplideSlide key={index}>
                   <div className="about-splide-slide">
