@@ -93,7 +93,7 @@ const About = () => {
                 perPage: 1,
                 gap: "0",
                 autoplay: true,
-                interval: 5000,
+                interval: 3000,
                 pauseOnHover: true,
                 arrows: true,
                 pagination: false,
